@@ -1,9 +1,7 @@
 import requests
-#import shutil
 
-import pdb
-pdb.set_trace()
 url = raw_input("Enter the url:")    #user input
+
 req = requests.get(url, stream=True) #getting the requested url 
 
 req.raise_for_status()               #use to raise na exceptions for error codes
@@ -14,8 +12,4 @@ with open('dhanu.txt', 'wb') as fd:   #it will write the url in this jpg imagefi
 
         print('Received a Chunk', chunk)
 
-        fd.write(chunk)	
-	
-	        
-		
-	
+        fd.write(chunk)
