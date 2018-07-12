@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Welcome, <small>{{ user.username }}</small>!</h2>
+  <p>Todays News: Welcome to Audetemi</p>
+  <a href="{% url 'news' %}">Add News</a>
+
+{% endblock %}

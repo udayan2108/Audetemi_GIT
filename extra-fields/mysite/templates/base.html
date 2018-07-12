@@ -1,0 +1,27 @@
+{% load rest_framework %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Audetemi News Portal{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Site</h1>
+      {% if user.is_authenticated %}
+      {% if user.is_superuser %}
+
+
+        <a href="{% url 'logout' %}">logout</a>
+      {% else %}
+        <a href="{% url 'logout' %}">logout</a>
+      {% endif %}
+      {% endif %}
+      <hr>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>

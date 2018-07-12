@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Welcome, <small>{{ user.username }}</small>!</h2>
+  <p>Todays News: Welcome to Audetemi</p>
+  <label for="newstitle"><b>News Title</b></label>
+  <input type="text" placeholder="Enter News Title" name="newstitle" required>
+
+  <label for="newdescription"><b>News Description</b></label>
+  <input type="text" placeholder="Enter News Title" name="newdescription" required>
+
+  <button type="submit">Add News</button>
+{% endblock %}
